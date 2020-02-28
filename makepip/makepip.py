@@ -7,14 +7,15 @@ import datetime
 now = datetime.datetime.now()
 
 def main():
-  name = input("Enter a pip name: ")
-  description = input("Enter a description: ")
+  print("Please enter the following questions to generate your new Pip!")
+  name = input("Pip name: ")
+  description = input("Description: ")
   author_name = input("Author name: ")
   author_website = input("Author website: ")
   author_email = input("Author email: ")
   git_repo = input("Git repository: ")
-  input_script = input("Enter a python script (absolute path) to package (code should be wrapped in a `def main():` function): ")
-  pypi_username = input("Your pypi username: ")
+  input_script = input("Enter the absolute path to a python script (code should be wrapped in a `def main():` function): ")
+  pypi_username = input("Pypi username: ")
   if name=="" or name==None:
     return
 
@@ -84,7 +85,7 @@ SOFTWARE.
   f.close()
 
   readme_file = f"""
-#{name}
+# {name}
 
 {description}
 """
@@ -131,6 +132,8 @@ username = {pypi_username}
     os.system(f"git commit -m 'Pushing code for {name} version 0.1'")
     os.system(f"git remote add origin {git_repo}")
     os.system("git push -u origin master")
+
+  print("Makepip is complete!")
 
 if __name__ == "__main__":
   main()

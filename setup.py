@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='makepip',  
-    version='0.2',
+    version='0.3',
     author="Andrew Odendaal",
     author_email="andrew@ao.gl",
     description="A pip that helps you make others pips!",
