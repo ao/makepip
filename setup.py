@@ -6,12 +6,12 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name='makepip',  
     version='0.3',
-    author="Andrew Odendaal",
-    author_email="andrew@ao.gl",
+    author="Andrew O",
+    author_email="support@ataiva.com",
     description="A pip that helps you make others pips!",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://ao.gl/makepip/",
+    url="https://ataiva.com/makepip/",
     packages=["makepip"],
     entry_points = {
         "console_scripts": ['makepip = makepip.makepip:main']
